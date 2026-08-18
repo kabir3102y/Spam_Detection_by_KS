@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import confusion_matrix
 
-df = pd.read_csv(r"C:\Users\Amarjeet Singh\Downloads\spam.csv", encoding="latin-1")
+df = pd.read_csv("spam.csv", encoding="latin-1")
 df = df.iloc[:, :2]
 df.columns = ["label", "message"]
 df["label"] = df["label"].map({"ham": 0, "spam": 1})
